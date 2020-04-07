@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 
-
 //Call controller
 const demo = require('../app/controllers/DemoController')
 

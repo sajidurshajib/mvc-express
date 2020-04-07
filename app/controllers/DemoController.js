@@ -1,5 +1,6 @@
 module.exports={
     home:(req,res)=>{
+        req.flash('success','This is a test notification.')
         res.render('index',{
             title:'Home Page'
         })

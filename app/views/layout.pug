@@ -5,6 +5,7 @@ html
         link(rel="stylesheet", href="/bower/bootstrap/dist/css/bootstrap.min.css")
         link(rel="stylesheet", href="style.css")
     body
+        != messages('message',locals)
         block content
         br
         br
