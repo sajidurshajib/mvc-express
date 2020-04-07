@@ -1,0 +1,15 @@
+{
+  "name": "popper.js",
+  "homepage": "https://github.com/FezVrasta/popper.js",
+  "version": "2.2.1",
+  "_release": "2.2.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.2.1",
+    "commit": "c818b3aa749cce50280b71a69aedaf235ca6a3a5"
+  },
+  "_source": "https://github.com/FezVrasta/popper.js.git",
+  "_target": "^2.2.1",
+  "_originalSource": "popper.js",
+  "_direct": true
+}
