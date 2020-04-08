@@ -1,6 +1,6 @@
 # mvc-express
 ### MVC pattern for expressJS
-** Feature **
+**Feature**
 - MVC pattern
 - bower
 - body parser
