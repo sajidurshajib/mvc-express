@@ -1,8 +1,10 @@
 # mvc-express
 ### MVC pattern for expressJS
-**Feature**
+  **Features -**
 - MVC pattern
 - bower
+- pug view template
+- layout with bootstrap
 - body parser
 - flash messages
 

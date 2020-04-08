@@ -1,10 +1,27 @@
 const express = require('express')
 const path = require('path')
 const bodyParser = require('body-parser')
-const flash = require('connect-flash')
 const session = require('express-session')
+const mongoose = require('mongoose')
 //Init express
 const app = express()
+
+
+
+//Mongoose setup
+mongoose.connect('mongodb://localhost/yourdbname')
+let db = mongoose.connection
+//Check connection
+db.once('open',()=>{
+  console.log('Connected with mongodb')
+})
+//Check error
+db.on('error',(err)=>{
+  console.log(err)
+})
+
+
+
 
 //Body parser middleware
 // parse application/x-www-form-urlencoded
@@ -14,9 +31,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+
 //Load view engine
 app.set('views',path.join(__dirname,'app/views'))
 app.set('view engine','pug')
+
+
+
 
 //Static directory
 app.use(express.static(path.join(__dirname,'public')))
@@ -36,6 +57,7 @@ app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res)
   next()
 })
+
 
 
 
