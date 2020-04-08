@@ -14,6 +14,14 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+//Load view engine
+app.set('views',path.join(__dirname,'app/views'))
+app.set('view engine','pug')
+
+//Static directory
+app.use(express.static(path.join(__dirname,'public')))
+
+
 
 //Session middleware
 app.use(session({
@@ -28,15 +36,6 @@ app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res)
   next()
 })
-
-
-
-//Load view engine
-app.set('views',path.join(__dirname,'app/views'))
-app.set('view engine','pug')
-
-//Static directory
-app.use(express.static(path.join(__dirname,'public')))
 
 
 

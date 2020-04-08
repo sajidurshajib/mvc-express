@@ -1,4 +1,4 @@
 .messages
     each type in Object.keys(messages)
-        each messages in messages[type]
+        each message in messages[type]
             div(class="alert alert-"+type) #{message}
