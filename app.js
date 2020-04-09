@@ -9,7 +9,11 @@ const app = express()
 
 
 //Mongoose setup
-mongoose.connect('mongodb://localhost/yourdbname')
+mongoose.connect('mongodb://localhost/yourdbname',{ 
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+ })
+ 
 let db = mongoose.connection
 //Check connection
 db.once('open',()=>{

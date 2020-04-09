@@ -1,4 +1,21 @@
 extends layout
 
 block content
-    h2 Login
+    .container
+        .row
+            .col-md-4
+            .col-md-4
+                if errors
+                    each error in errors
+                        .alert.alert-danger=error.msg
+                .login-form
+                    form(action='/login', method='post')
+                        h2.text-center Log in
+                        .form-group
+                            input.form-control(type='text', name="username", placeholder='Username')
+                        .form-group
+                            input.form-control(type='password', name="password", placeholder='Password')
+                        .form-group
+                            button.btn.btn-primary.btn-block(type='submit') Log in
+                         
+                        a(href='#') Create an Account

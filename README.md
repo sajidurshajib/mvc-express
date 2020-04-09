@@ -7,5 +7,7 @@
 - layout with bootstrap
 - body parser
 - flash messages
+- express validator 
+- mongoose confifured
 
 
