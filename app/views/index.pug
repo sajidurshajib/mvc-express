@@ -1,4 +1,14 @@
 extends layout
 
 block content
-    h2 Hello world
+    .jumbotron
+        .container
+            img(src="/img/node_logo.svg.png" class="node-logo")
+            h4.display-4 Node QuickStart pack
+            p.lead
+                | This is a quickstart pack for node developers. 
+            hr.my-4
+            p
+                | It uses utility classes for typography and spacing to space content out within the larger container.
+            p.lead
+                a.btn.btn-success.btn-lg(href='/login', role='button') View login page

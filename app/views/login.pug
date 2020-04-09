@@ -5,9 +5,16 @@ block content
         .row
             .col-md-4
             .col-md-4
+                pre
+
+
                 if errors
                     each error in errors
                         .alert.alert-danger=error.msg
+                
+                pre
+
+
                 .login-form
                     form(action='/login', method='post')
                         h2.text-center Log in
@@ -17,5 +24,4 @@ block content
                             input.form-control(type='password', name="password", placeholder='Password')
                         .form-group
                             button.btn.btn-primary.btn-block(type='submit') Log in
-                         
-                        a(href='#') Create an Account
+            
