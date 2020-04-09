@@ -3,13 +3,15 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const mongoose = require('mongoose')
+const configDB = require('./config/database')
+
 //Init express
 const app = express()
 
 
 
 //Mongoose setup
-mongoose.connect('mongodb://localhost/yourdbname',{ 
+mongoose.connect(configDB.database,{ 
   useNewUrlParser: true,
   useUnifiedTopology: true
  })
