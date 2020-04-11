@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const session = require('express-session')
 const mongoose = require('mongoose')
 const configDB = require('./config/database')
+const passport = require('passport')
 
 //Init express
 const app = express()
@@ -63,6 +64,27 @@ app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res)
   next()
 })
+
+
+
+
+
+
+// passport config
+require('./config/passport')(passport)
+// Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+//When you need authenticate...
+
+// app.get('*',req,res,next){
+//   res.locals.user = req.user || null
+//   next()
+// }
+
+
+
 
 
 

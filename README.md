@@ -17,6 +17,7 @@ Feel free and comment for update this repository perfectly.
 - flash messages and added with template
 - express validator 
 - mongoose configured
+- passport (local-strategy)
 
 
 
